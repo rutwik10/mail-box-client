@@ -16,7 +16,7 @@ const SingleSent = () => {
     try {
       setLoading(true);
       let res = await axios.get(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${newEmail}/sent/${id}.json`
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${newEmail}/sent/${id}.json`
       );
       console.log(res);
       setData(res.data);

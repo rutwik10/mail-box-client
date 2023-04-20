@@ -17,7 +17,7 @@ const Sent = () => {
     try {
       setLoading(true);
       let res = await axios.get(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${newEmail}/sent.json`
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${newEmail}/sent.json`
       );
       console.log(res);
       setData(res.data);
@@ -38,7 +38,7 @@ const Sent = () => {
     try {
       setLoading(true);
       let res = await axios.delete(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${newEmail}/sent/${id}.json`
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${newEmail}/sent/${id}.json`
       );
       console.log(res);
       alert('Mail deleted successfully')

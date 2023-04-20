@@ -18,7 +18,7 @@ const Inbox = () => {
     try {
       setLoading(true);
       let res = await axios.get(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${newEmail}/inbox.json`
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${newEmail}/inbox.json`
       );
       console.log(res);
       if (res.data) {
@@ -35,7 +35,7 @@ const Inbox = () => {
     dispatch(mailAction.delete(id));
     try {
       let res = await axios.delete(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${newEmail}/inbox/${id}.json`
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${newEmail}/inbox/${id}.json`
       );
       console.log(res);
       alert('Mail deleted successfully')

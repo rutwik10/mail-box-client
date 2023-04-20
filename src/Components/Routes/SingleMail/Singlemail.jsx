@@ -21,14 +21,14 @@ const Singlemail = () => {
     setloading(true);
     try {
       let res = await axios.get(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${newEmail}/inbox/${id}.json`
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${newEmail}/inbox/${id}.json`
       );
       dispatch(mailAction.mailRead({ id: id, mail: res.data }));
       setDataMail(res.data);
       console.log("res:", res);
 
       let res2 = await axios.put(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${newEmail}/inbox/${id}.json`,
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${newEmail}/inbox/${id}.json`,
         { body: res.data.body, from: res.data.from, read: true }
       );
       setloading(false);

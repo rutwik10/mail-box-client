@@ -27,7 +27,7 @@ const MailBox = () => {
     try {
       setLoading(true);
       let res = await axios.post(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${fromMail}/sent.json`,
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${fromMail}/sent.json`,
         obj
       );
       dispatch(
@@ -51,7 +51,7 @@ const MailBox = () => {
     try {
       setLoading(true);
       let res = await axios.post(
-        `https://mail-box-4b435-default-rtdb.firebaseio.com/${toMail}/inbox.json`,
+        `https://mailbox-1a49d-default-rtdb.firebaseio.com/${toMail}/inbox.json`,
         obj2
       );
       dispatch(mailAction.sent({}));
